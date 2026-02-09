@@ -1,0 +1,132 @@
+:root {
+  --ink: #000000;
+  --accent: #247065;
+  --border: #247065;
+  --bg: #ffffff;
+  --danger: #d72f19;
+}
+body {
+  font-family: akzidenz-grotesk-next, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+a, a:visited {
+  color: #247065;
+}
+.wrap {
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  padding: 0 16px;
+}
+h1 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+.note {
+  font-size: 13px;
+  color: var(--accent);
+  margin: 0 0 16px;
+}
+form {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 12px 12px 6px;
+  border-radius: 6px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: flex-end;
+}
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+select, input {
+  font-size: 13px;
+  padding: 4px 6px;
+}
+.field {
+  /*min-width: 160px;*/
+}
+.field.small {
+  /*min-width: 120px;*/
+}
+.actions {
+  margin-left: 0;
+}
+button {
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.hidden { display: none; }
+
+.status {
+  margin: 12px 0;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  font-size: 13px;
+  vertical-align: top;
+}
+th { background: #e9f2f2; }
+td.num { text-align: right; }
+
+.help-tip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+}
+.help-tip.is-open::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: 22px;
+  right: 0;
+  z-index: 5;
+  width: 260px;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  font-size: 12px;
+}
+.tips {
+  background: #fff;
+  border: 1px dashed var(--border);
+  padding: 10px;
+  font-size: 13px;
+  margin-top: 12px;
+}
