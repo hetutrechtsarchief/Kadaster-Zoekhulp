@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kadaster zoekhulp - Het Utrechts Archief</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Kadaster zoekhulp - Het Utrechts Archief</h1>
+    <p class="note">Zoek in de volgende Kadasterbronnen: Register 71, naamlijsten, leggers, SAT, Register 69, het Algemeen Register en de legger (voor- en nawerk). Deze registers bieden toegang tot eigendomsgegevens, kadastrale aanduidingen en bijbehorende administratieve informatie.</p>
+
+    <form id="searchForm">
+      <div class="row">
+        <div class="field">
+          <label for="soort">Zoek in</label>
+          <select id="soort" name="soort">
+            <option value="">-- kies ---</option>
+            <option value="Register 71">Register 71 (1844-1987)</option>
+            <option value="Naamlijst">Naamlijsten (1832-1863)</option>
+            <option value="Leggers">Leggers (1832-1987)</option>
+            <option value="SAT">SAT (1832-1863)</option>
+            <option value="Register 69">Register 69 (1838-1928)</option>
+            <option value="Alg">Alg. Register (1838-1928)</option>
+            <option value="Voorna">Legger: voor- en nawerk</option>
+          </select>
+        </div>
+
+        <div class="field" id="field-gemeente">
+          <label for="gemeente">Gemeente</label>
+          <select id="gemeente" name="gemeente">
+            <option value="">Alle gemeentes</option>
+            <option value="Abcoude">Abcoude</option>
+            <option value="Abstede">Abstede</option>
+            <option value="Achthoven">Achthoven</option>
+            <option value="Achtienhoven">Achtienhoven</option>
+            <option value="Amerongen">Amerongen</option>
+            <option value="Amersfoort">Amersfoort</option>
+            <option value="Baambrugge">Baambrugge</option>
+            <option value="Baarn">Baarn</option>
+            <option value="Barwoutswaarder">Barwoutswaarder</option>
+            <option value="Benschop">Benschop</option>
+            <option value="Breukelen">Breukelen</option>
+            <option value="Breukelen-Nijenrode">Breukelen-Nijenrode</option>
+            <option value="Breukelen-St. Pieters">Breukelen-St. Pieters</option>
+            <option value="Bunnik">Bunnik</option>
+            <option value="Bunschoten">Bunschoten</option>
+            <option value="Cabauw">Cabauw</option>
+            <option value="Catharijne">Catharijne</option>
+            <option value="Cothen">Cothen</option>
+            <option value="Darthuizen">Darthuizen</option>
+            <option value="De Bilt">De Bilt</option>
+            <option value="Doorn">Doorn</option>
+            <option value="Driebergen">Driebergen</option>
+            <option value="Driebergen-Rijsenburg">Driebergen-Rijsenburg</option>
+            <option value="Duitz">Duitz</option>
+            <option value="Eemnes">Eemnes</option>
+            <option value="Haarzuilen">Haarzuilen</option>
+            <option value="Haarzuilens">Haarzuilens</option>
+            <option value="Harmelen">Harmelen</option>
+            <option value="Hekendorp">Hekendorp</option>
+            <option value="Hoenkoop">Hoenkoop</option>
+            <option value="Hoogland">Hoogland</option>
+            <option value="Houdijken">Houdijken</option>
+            <option value="Houten">Houten</option>
+            <option value="IJsselstein">IJsselstein</option>
+            <option value="Jaarsveld">Jaarsveld</option>
+            <option value="Jutphaas">Jutphaas</option>
+            <option value="Kamerik">Kamerik</option>
+            <option value="Kockengen">Kockengen</option>
+            <option value="Laagnieuwkoop">Laagnieuwkoop</option>
+            <option value="Laag-Nieuwkoop">Laag-Nieuwkoop</option>
+            <option value="Lage Ruige Weide">Lage Ruige Weide</option>
+            <option value="Langbroek">Langbroek</option>
+            <option value="Lange Ruige Weide">Lange Ruige Weide</option>
+            <option value="Lauwerecht">Lauwerecht</option>
+            <option value="Leersum">Leersum</option>
+            <option value="Leusden">Leusden</option>
+            <option value="Linschoten">Linschoten</option>
+            <option value="Loenen">Loenen</option>
+            <option value="Loenersloot">Loenersloot</option>
+            <option value="Loosdrecht">Loosdrecht</option>
+            <option value="Lopik">Lopik</option>
+            <option value="Maarn">Maarn</option>
+            <option value="Maarssen">Maarssen</option>
+            <option value="Maarsseveen">Maarsseveen</option>
+            <option value="Maartensdijk">Maartensdijk</option>
+            <option value="Mijdrecht">Mijdrecht</option>
+            <option value="Mijzijde">Mijzijde</option>
+            <option value="Montfoort">Montfoort</option>
+            <option value="Nigtevecht">Nigtevecht</option>
+            <option value="Odijk">Odijk</option>
+            <option value="Oud Wulven">Oud Wulven</option>
+            <option value="Oudekoop">Oudekoop</option>
+            <option value="Oudenrijn">Oudenrijn</option>
+            <option value="Oudewater">Oudewater</option>
+            <option value="Papekop">Papekop</option>
+            <option value="Polsbroek">Polsbroek</option>
+            <option value="Renswoude">Renswoude</option>
+            <option value="Rhenen">Rhenen</option>
+            <option value="Rhijnauwen">Rhijnauwen</option>
+            <option value="Rietveld">Rietveld</option>
+            <option value="Rijsenburg">Rijsenburg</option>
+            <option value="Ruwiel">Ruwiel</option>
+            <option value="Schalkwijk">Schalkwijk</option>
+            <option value="Schonauwen">Schonauwen</option>
+            <option value="s-Gravesloot">'s-Gravesloot</option>
+            <option value="Snelrewaard">Snelrewaard</option>
+            <option value="Soest">Soest</option>
+            <option value="Sterkenburg">Sterkenburg</option>
+            <option value="Stoutenburg">Stoutenburg</option>
+            <option value="Teckop">Teckop</option>
+            <option value="Tienhoven">Tienhoven</option>
+            <option value="Tolsteeg">Tolsteeg</option>
+            <option value="Tull en t Waal">Tull en 't Waal</option>
+            <option value="Utrecht">Utrecht</option>
+            <option value="Veenendaal">Veenendaal</option>
+            <option value="Veldhuizen">Veldhuizen</option>
+            <option value="VENENDAAL">Venendaal</option>
+            <option value="Vinkeveen">Vinkeveen</option>
+            <option value="Vleuten">Vleuten</option>
+            <option value="Vreeland">Vreeland</option>
+            <option value="Vreeswijk">Vreeswijk</option>
+            <option value="Waarder">Waarder</option>
+            <option value="Waverveen">Waverveen</option>
+            <option value="Werkhoven">Werkhoven</option>
+            <option value="Westbroek">Westbroek</option>
+            <option value="Wijk bij Duurstede">Wijk bij Duurstede</option>
+            <option value="Willeskop">Willeskop</option>
+            <option value="Willige Langerak">Willige Langerak</option>
+            <option value="Wilnis">Wilnis</option>
+            <option value="Woerden">Woerden</option>
+            <option value="Woudenberg">Woudenberg</option>
+            <option value="Wulverhorst">Wulverhorst</option>
+            <option value="Zegveld">Zegveld</option>
+            <option value="Zeist">Zeist</option>
+            <option value="Zevender">Zevender</option>
+            <option value="Zuilen">Zuilen</option>
+          </select>
+        </div>
+
+        <div class="field hidden" id="field-legger">
+          <label for="legger">Legger-artikelnummer</label>
+          <input id="legger" name="legger" type="text" />
+        </div>
+
+        <div class="field hidden" id="field-soort2">
+          <label for="soort2">Voor- en nawerk</label>
+          <select id="soort2" name="soort2">
+            <option value="Verzamellijst">Verzamellijst</option>
+            <option value="Tarieflijst">Tarieflijst</option>
+            <option value="Lijst tijdelijk zakelijke rechten">Lijst tijdelijk zakelijke rechten</option>
+            <option value="Aanwijzing polderlasten">Aanwijzing polderlasten</option>
+          </select>
+        </div>
+
+        <div class="field hidden" id="field-naam">
+          <label for="naam">Naam</label>
+          <input id="naam" name="naam" type="text" />
+        </div>
+
+        <div class="field hidden" id="field-sectie">
+          <label for="sectie">Sectie</label>
+          <input id="sectie" name="sectie" type="text" placeholder="bijv B" size="4" />
+        </div>
+
+        <div class="field hidden" id="field-perceel">
+          <label for="perceel">Perceelnummer</label>
+          <input id="perceel" name="perceel" type="text" placeholder="bijv 4459" />
+        </div>
+
+        <div class="field hidden" id="field-arrondissement">
+          <label for="arrondissement">Arrondissement</label>
+          <select id="arrondissement" name="arrondissement">
+            <option value="">Alle arrondissementen</option>
+            <option value="Amersfoort">Amersfoort</option>
+            <option value="Utrecht">Utrecht</option>
+          </select>
+        </div>
+
+        <div class="field hidden" id="field-deel">
+          <label for="deel">Deel</label>
+          <input id="deel" name="deel" type="text" />
+        </div>
+
+        <div class="field hidden" id="field-vak">
+          <label for="vak">Vaknummer</label>
+          <input id="vak" name="vak" type="text" />
+        </div>
+
+        <div class="field hidden" id="field-volgnummer">
+          <label for="volgnummer">Volgnummer</label>
+          <input id="volgnummer" name="volgnummer" type="text" />
+        </div>
+
+        <div class="actions">
+          <button id="btnZoeken" type="submit" disabled>zoeken</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="status" id="status"></div>
+    <div id="tipsBefore" class="tips">
+      <div data-soort="">
+        <ul>
+          <li>Register 71 is de ingang op de <em>legger</em> via <em>perceelnummer</em></li>
+          <li>Naamlijst 1832-1863 is de ingang op de <em>legger</em> via <em>naam</em> van de eigenaar</li>
+          <li>De legger geeft per artikelnummer (=eigenaar) een overzicht van diens bezittingen in de gemeente</li>
+          <li>De SAT (supplementoire aanwijzende tafel) verwijst naar de <em>legger</em></li>
+          <li>Register 69 is de ingang op het <em>algemeen register</em> via <em>perceelnummer</em></li>
+          <li>Het Algemeen Register geeft per vak (=eigenaar) een overzicht van diens bezittingen en de daarop berustende erfdienstbaarheden in een arrondissement</li>
+          <li>Legger: voor- en nawerk betreft lijsten van gegevens in de oudste leggers die voor een hele gemeente gelden.</li>
+          <li>Raadpleeg voor een uitgebreide toelichting de handleiding</li>
+          <li>Raadpleeg voor de niet-gescande registers de inventaris (Toegang 1294)</li>
+        </ul>
+      </div>
+      <div data-soort="Register 71" class="hidden">
+        <ul>
+          <li>In Register 71 vindt u via het perceelnummer het bijbehorende artikelnummer van de eigenaar in de legger.</li>
+          <li>Kies een gemeente</li>
+          <li>Vul de sectie in.</li>
+          <li>Vul het perceelnummer in <em>zonder</em> toevoegingen als bis of A en wat daarna volgt.</li>
+        </ul>
+        <ul>
+          <li>Meestal geldt: hoe lager het reeksnummer en het inventarisnummer, hoe ouder het register</li>
+          <li>Op de scan ziet u in de eerste kolom uw perceelsnummer. In de tweede kolom <em>meteen vooraan</em> vindt u de artikelnummers uit de legger.</li>
+          <li>Overige nummers meer naar rechts duiden op latere of vorige perceelsnummers.</li>
+        </ul>
+      </div>
+      <div data-soort="Naamlijst" class="hidden">
+        <ul>
+          <li>In het Naamlijst register vindt u voor de periode 1832-1863 via de naam van de eigenaar het bijbehorende artikelnummer van de eigenaar in de legger.</li>
+          <li>Kies een gemeente</li>
+          <li>Vul alleen de eerste letter van de naam in</li>
+          <li>Klik op zoeken</li>
+        </ul>
+        <ul>
+          <li>De namen op de getoonde bladzijde staan niet helemaal op alfabetische volgorde</li>
+          <li>Het betreft uitsluitend de namen van personen die daadwerkelijk eigendom of andere rechten op onroerend goed binnen de gemeente hadden.</li>
+        </ul>
+      </div>
+      <div data-soort="Leggers" class="hidden">
+        <ul>
+          <li>De legger geeft per artikelnummer (=eigenaar of ander rechthebbende) een overzicht van diens eigendommen of andere zakelijke rechten op onroerende goed in een gemeente</li>
+          <li>Kies een gemeente</li>
+          <li>Vul het leggerartikelnummer in</li>
+        </ul>
+        <p><button type="button" data-toggle="meer-legger">Hoe kom ik aan een leggerartikelnummer?</button></p>
+        <div id="meer-legger" class="hidden">
+          <ul>
+            <li>Via het perceelnummer met behulp van register 71 (1844-1987)</li>
+            <li>Via het perceelnummer met behulp van OAT en SAT (1832-1863). Raadpleeg voor de OAT de uitgaven van de Kadastrale Atlas voor de Provincie Utrecht op studiezaal 2 <del>of www.dewoonomgeving.nl</del></li>
+            <li>Via de naam met behulp van Naamlijsten 1832-1863</li>
+            <li>Via de naam met behulp van Alphabetische naamlijst (kad. 85) 1864-1928. Dit register is niet gescand. U kunt de originelen opvragen met behulp van Toegang 1294, rubriek 3.3.1.4</li>
+          <li>Via een verwijzing bij een ander leggerartikelnummer</li>
+        </ul>
+        </div>
+        <ul>
+          <li>Meestal geldt: hoe lager het reeks of inventarisnummer hoe jonger het register</li>
+          <li>In de kop van het artikel vindt u naam, beroep en woonplaats van de eigenaar of rechthebbende</li>
+          <li>In een van de eerste kolommen vindt u sectie en perceelnummers</li>
+          <li>Achter het perceelnummer vindt u een verwijzing naar eventuele koopakten in het register van eigendomsovergang Hyp 4.</li>
+          <li>In de laatste vier kolommen vindt u verwijzingen naar de artikelnummers van vorige en latere eigenaren of naar een ander volgnummer binnen hetzelfde artikelnummer.</li>
+          <li>Zie voor verdere toelichting de handleiding</li>
+        </ul>
+      </div>
+      <div data-soort="SAT" class="hidden">
+        <ul>
+          <li>In de Supplementoire Aanwijzende Tafel (SAT) vindt u wijzigingen van eigenaar, grootte en gebruik van een perceel, die niet in de Oorspronkelijke Aanwijzende Tafel 1832 mochten worden aangebracht. U vindt onder andere een verwijzing naar het leggerartikel van een (nieuwe) eigenaar en nieuwe perceelnummers</li>
+          <li>Kies een gemeente</li>
+          <li>Vul de sectie in</li>
+          <li>Vul het <em>volgnummer</em> in (dus <em>niet</em> het <em>perceelnummer</em>). Het volgnummer vindt u in de OAT. Raadpleeg voor de OAT de uitgaven van de Kadastrale Atlas Provincie Utrecht 1832 op studiezaal 2 of www.dewoonomgeving.nl</li>
+        </ul>
+        <ul>
+          <li>Kolom 1: volgnummer</li>
+          <li>Kolom 5 en 6: oude en nieuwe perceelnummer</li>
+          <li>Kolom 9: bestaande of nieuwe eigenaar</li>
+          <li>Kolom 34 en 35: Volgnummer in SAT van vorige of latere verandering</li>
+        </ul>
+      </div>
+      <div data-soort="Register 69" class="hidden">
+        <ul>
+          <li>In het Register 69 vindt u via het perceelnummer het bijbehorende vak van de eigenaar of rechthebbende in het Algemeen Register 1838-1928.</li>
+          <li>Kies een gemeente</li>
+          <li>Vul de sectie in</li>
+          <li>Vul het perceelnummer in <em>zonder</em> toevoegingen als bis of A.</li>
+        </ul>
+        <ul>
+          <li>Op de scan ziet u in de eerste kolom uw perceelnummer. <em>Meteen vooraan</em> in de brede kolom in het midden vindt u de deel- en vaknummers van het Algemeen register. B.v. 24/145 betekent: vak 145 in deel 24 van het Algemeen Register.</li>
+          <li>Overige nummers meer naar rechts duiden op latere of vorige perceelsnummers.</li>
+        </ul>
+      </div>
+      <div data-soort="Alg" class="hidden">
+        <ul>
+          <li>Het Algemeen Register geeft per vak (=eigenaar) een overzicht van diens verwerving van eigendom en andere rechten op onroerend goed in een heel Arrondissement met verwijzingen naar de akten van eigendomsovergang in Hyp 4. Hierin is ook informatie over hypotheeklasten en erfdienstbaarheden te vinden.</li>
+          <li>Geen informatie over verkrijging via erfenis.</li>
+          <li>Kies een arrondissement (Zie de handleiding voor een overzicht van gemeenten per arrondissement)</li>
+          <li>Vul het deel en vaknummer in</li>
+        </ul>
+        <p><button type="button" data-toggle="meer-alg">Hoe kom ik aan het juiste deel- en vaknummer?</button></p>
+        <div id="meer-alg" class="hidden">
+          <ul>
+            <li>Via een perceelnummer met behulp van register 69</li>
+          <li>Via een naam met behulp van de Alphabetische naamwijzer van verkrijgers 1838-1928. Dit register is niet gescand. U kunt de originelen opvragen met behulp van Toegang 1294, rubriek 3.1.4.5</li>
+          </ul>
+        </div>
+        <ul>
+          <li>In de eerste kolom vindt u vaknummer en naam van de eigenaar en de kadastrale gegevens (gemeente, sectie, perceel) van het onroerend goed.</li>
+          <li>In kolom 2-6 vindt u informatie over de titel van aankomst. Dat is bijvoorbeeld de koopakte, met de koopprijs, de datum van de koop en een verwijzing naar het nummer van de akte in register Hyp 4. (kolom 5-6)</li>
+          <li>In de volgende kolommen volgt informatie over bezwaring met hypotheek (tot 1879) en beperkingen van het zakelijk recht (verhuur, erfdienstbaarheden, beslag)</li>
+          <li>Zie voor verdere toelichting de handleiding</li>
+        </ul>
+      </div>
+      <div data-soort="Voorna" class="hidden">
+        <ul>
+          <li>Voor en achter in de oudste legger zijn enkele tabellen opgenomen met gegevens die de gehele gemeente betreffen</li>
+          <li>Verzamellijst: optelling van alle belastbare inkomens voor wat betreft grondbelasting in de gemeente</li>
+          <li>Tarieflijst: overzicht van soorten grondgebruik en opstallen die in een gemeente voorkomen, de verdeling ervan in belastingklassen, en het tarief dat voor die verschillende klassen geldt</li>
+          <li>Lijst tijdelijk zakelijke rechten: Overzicht van artikelnummers met percelen waarop een tijdelijk zakelijk recht berust (b.v. erfpacht), met jaar van afloop</li>
+          <li>Aanwijzing polderlasten: overzicht per sectie van bestaande heffingen die van de te heffen grondbelasting moeten worden afgetrokken.</li>
+        </ul>
+      </div>
+    </div>
+    <div id="results"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
